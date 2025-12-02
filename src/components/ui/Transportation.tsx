@@ -46,10 +46,10 @@ export function Transportation() {
                         {/* Header */}
                         <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-100 text-gray-800 font-semibold text-sm md:text-base">
                             <div className="py-4 px-6 border-b md:border-b-0 md:border-r border-gray-200 flex items-center">
-                                <span className="mr-2">📍</span> KONUM
+                                <span className="mr-2">📍</span> LOCATION
                             </div>
                             <div className="py-4 px-6 border-b md:border-b-0 border-gray-200 flex items-center">
-                                <span className="mr-2">⏰</span> SERVİS SAATİ
+                                <span className="mr-2">⏰</span> TRANSPORTATION TIME
                             </div>
                         </div>
 

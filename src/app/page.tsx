@@ -35,6 +35,7 @@ export default function Home() {
     {
       id: 1,
       name: "VIP Menu Dinner",
+      slug: "vip-menu-dinner",
       details: "Details",
       tour: "Tour 3 Hours",
       drinks: "Unlimited Soft Drinks",
@@ -45,6 +46,7 @@ export default function Home() {
     {
       id: 2,
       name: "Deluxe Dinner",
+      slug: "deluxe-dinner",
       details: "Details",
       tour: "Tour 2 Hours",
       drinks: "Unlimited Soft Drinks",
@@ -55,6 +57,7 @@ export default function Home() {
     {
       id: 3,
       name: "Classic Dinner",
+      slug: "classic-dinner",
       details: "Details",
       tour: "Tour 1.5 Hours",
       drinks: "Fix Menu",
@@ -65,6 +68,7 @@ export default function Home() {
      {
       id: 4,
       name: "Premium Dinner",
+      slug: "premium-dinner",
       details: "Details",
       tour: "Tour 1.5 Hours",
       drinks: "Fix Menu",

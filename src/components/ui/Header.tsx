@@ -13,7 +13,8 @@ export function Header() {
 
                     <nav className="hidden md:flex items-center gap-6 text-sm">
                         <a href="/" className="hover:text-rose-600 transition font-semibold text-white text-xl">Home</a>
-                        <a href="/about" className="hover:text-rose-600 transition font-semibold text-white text-xl">Gallery</a>
+                        <a href="/tours" className="hover:text-rose-600 transition font-semibold text-white text-xl">Tours</a>
+                        <a href="/gallery" className="hover:text-rose-600 transition font-semibold text-white text-xl">Gallery</a>
                         <a href="/transportation" className="hover:text-rose-600 transition font-semibold text-white text-xl">Transportation</a>
                         <a href="/contact" className="hover:text-rose-600 transition font-semibold text-white text-xl">Contact</a>
                     </nav>

@@ -34,7 +34,7 @@ export default function Home() {
       const menuItems = [
     {
       id: 1,
-      name: "Fix Menu Dinner",
+      name: "Fix Menu Dinner (Unlimited Soft Drinks)",
       slug: "fix-menu-dinner",
       details: "Details",
       tour: "Tour 2 Hours",
@@ -60,7 +60,7 @@ export default function Home() {
       slug: "vip-menu-dinner",
       details: "Details",
       tour: "Tour 2 Hours",
-      drinks: "Fix Menu",
+      drinks: "Unlimited Soft Drinks",
       service: "Free Service",
       price: "€ 100 pp.",
       image: "/img/menu-meat.jpg",

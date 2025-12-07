@@ -18,7 +18,7 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
                       subtitle="Experience the elegance of our luxury dinner cruise"
                       breadcrumb={[
                           { label: "Home", href: "/" },
-                          { label: "Tours", href: "#" },
+                          { label: "Tours", href: "/tours" },
                       ]}
                   />
       <TourDetail tour={tour} />

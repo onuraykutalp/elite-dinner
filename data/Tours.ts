@@ -21,9 +21,9 @@ export type Tour = {
 
 export const tours: Record<string, Tour> = {
   "fix-menu-dinner": {
-    title: "Fix Menu Dinner",
+    title: "Fix Menu Dinner (Unlimited Soft Drinks)",
     duration: "3 Hours",
-    drinks: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
+    drinks: "Unlimited Soft",
     service: "Free Service",
     price: "€ 60 pp.",
     images: [
@@ -69,7 +69,7 @@ export const tours: Record<string, Tour> = {
   "fix-menu-dinner-with-alcohol": {
     title: "Fix Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
     duration: "2 Hours",
-    drinks: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
+    drinks: "Unlimited Soft + 2 Alcoholic",
     service: "Free Service",
     price: "€ 70 pp.",
     images: [
@@ -116,7 +116,7 @@ export const tours: Record<string, Tour> = {
   "vip-menu-dinner": {
     title: "Vip Menu Dinner (Unlimited Soft Drinks)",
     duration: "2 Hours",
-    drinks: "Fix Menu",
+    drinks: "Unlimited Soft",
     service: "Free Service",
     price: "€ 100 pp.",
     images: [
@@ -168,7 +168,7 @@ export const tours: Record<string, Tour> = {
   "vip-menu-dinner-with-alcohol": {
     title: "Vip Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
     duration: "2 Hours",
-    drinks: "Fix Menu",
+    drinks: "Unlimited Soft + 2 Alcoholic",
     service: "Free Service",
     price: "€ 120 pp.",
     images: [

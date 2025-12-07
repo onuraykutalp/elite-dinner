@@ -2,6 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
+import { BiFoodMenu, BiSolidDrink } from "react-icons/bi";
+import { MdRoomService } from "react-icons/md";
 
 type MenuItem = {
   id: number | string;
@@ -27,7 +29,7 @@ export function MenuCards({ items }: MenuCardsProps) {
           Our Menu Options
         </h2>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {items.map((item) => (
             <div
               key={item.id}
@@ -51,24 +53,17 @@ export function MenuCards({ items }: MenuCardsProps) {
                   {/* Stylish parameter list */}
                   <ul className="space-y-2">
                     <li className="flex items-center text-gray-700 text-sm">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-rose-600" viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M6 2a1 1 0 00-1 1v2a1 1 0 001 1h8a1 1 0 001-1V3a1 1 0 00-1-1H6z" />
-                        <path fillRule="evenodd" d="M4 7a2 2 0 012-2h8a2 2 0 012 2v9a2 2 0 01-2 2H6a2 2 0 01-2-2V7zm3 2a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
-                      </svg>
+                      <BiSolidDrink className="h-5 w-5 mr-2 text-rose-600" />
                       {item.tour}
                     </li>
 
                     <li className="flex items-center text-gray-700 text-sm">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h2l1 2h13l1-2h2" />
-                      </svg>
+                      <BiFoodMenu className="h-5 w-5 mr-2 text-rose-600" />
                       {item.drinks}
                     </li>
 
                     <li className="flex items-center text-gray-700 text-sm">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3" />
-                      </svg>
+                      <MdRoomService className="h-5 w-5 mr-2 text-rose-600" />
                       {item.service}
                     </li>
                   </ul>

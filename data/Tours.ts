@@ -4,7 +4,7 @@ export type Tour = {
   drinks: string;
   service: string;
   price: string;
-  image: string;
+  images: string[]; 
   description: string;
 
   menu: {
@@ -18,14 +18,22 @@ export type Tour = {
   };
 };
 
+
 export const tours: Record<string, Tour> = {
-  "vip-menu-dinner": {
-    title: "VIP Menu Dinner",
+  "fix-menu-dinner": {
+    title: "Fix Menu Dinner",
     duration: "3 Hours",
     drinks: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
     service: "Free Service",
-    price: "€ 100 pp.",
-    image: "/img/menu-1.jpg",
+    price: "€ 60 pp.",
+    images: [
+      "/img/menu-chicken.jpg",
+      "/img/menu-meat.jpg",
+      "/img/menu-fish.jpg",
+      "/img/menu-food.jpg",
+      "/img/menu-pasta.jpg",
+       "/img/menu-meze-mix-1.jpg",
+    ],
     description: "Special luxury dinner experience with a rich Turkish menu.",
 
     menu: {
@@ -33,17 +41,60 @@ export const tours: Record<string, Tour> = {
       items: [
         "Cold Starters (Traditional Turkish Appetizers)",
         "Fresh Seasonal Salad",
-        "ENTREE (Main Dish with 6 Options)",
-        " – Meat Casserole with mushroom and mashed potatoes",
+        "ENTREE (Main Dish with 5 Options)",
         " – Grilled Fish with fresh greens",
         " – Chicken Steak with rice and french fries",
         " – Meat Patty with mashed potatoes and cheese",
         " – Vegetarian Plate (sauteed vegetables)",
         " – Creamy Pasta",
-        "Mixed Nuts",
-        "Dessert (Baklava)",
-        "Fruit",
-        "Drinks: Unlimited coke, fanta, sprite, juice, tea, coffee + 2 alcoholic drinks",
+        "DRINKS : Unlimited soft drinks such as coke, fanta, sprite, juice, tea, coffee"
+      ],
+    },
+
+    program: {
+      title: "Show Program",
+      items: [
+        "Whirling Dervish",
+        "Shaman Dance",
+        "Turkish Gypsy Dance",
+        "Caucasian Dance",
+        "Belly Dancer Group Show",
+        "Folk Dance Performance (Traditional Turkish Dances)",
+        "Belly Dancer",
+        "Professional DJ Performance",
+      ],
+    },
+  },
+
+  "fix-menu-dinner-with-alcohol": {
+    title: "Fix Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
+    duration: "2 Hours",
+    drinks: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
+    service: "Free Service",
+    price: "€ 70 pp.",
+    images: [
+      "/img/menu-fish.jpg",
+      "/img/menu-meat.jpg",
+      "/img/menu-chicken.jpg",
+      "/img/menu-food.jpg",
+      "/img/menu-pasta.jpg",
+      "/img/menu-meze-mix-1.jpg",
+    ],
+    description: "A delicious Turkish dinner experience with an elegant atmosphere.",
+
+    menu: {
+      title: "Dinner Menu",
+      items: [
+        "Cold Starters (Traditional Turkish Appetizers)",
+        "Fresh Seasonal Salad",
+        "ENTREE (Main Dish with 5 Options)",
+        "Grilled Fish with fresh greens",
+        "Chicken Steak with rice and french fries",
+        "Meat Patty with mashed potatoes and cheese",
+        "Vegetarian Plate (sauteed vegetables)",
+        "Creamy Pasta",
+        "DRINKS : Unlimited soft drinks such as coke, fanta, sprite, juice, tea, coffee + 2 Glasses of local alcoholic drinks (wine, raki, beer)",
+        "Import drinks are not included and available with an extra charge on the boat."
       ],
     },
 
@@ -51,103 +102,120 @@ export const tours: Record<string, Tour> = {
       title: "Turkish Night Show Program",
       items: [
         "Whirling Dervish",
+        "Shaman Dance",
         "Turkish Gypsy Dance",
-        "Belly Dancer Group Show",
         "Caucasian Dance",
-        "Folk Dance Performance (Traditional Turkish Dances)",
-        "Solo Belly Dancer",
+        "Belly Dancer Group Show",
+        "Folk Dance Performance",
+        "Belly Dancer",
         "Professional DJ Performance",
       ],
     },
   },
 
-  "deluxe-dinner": {
-    title: "Deluxe Dinner",
+  "vip-menu-dinner": {
+    title: "Vip Menu Dinner (Unlimited Soft Drinks)",
     duration: "2 Hours",
-    drinks: "Unlimited Soft Drinks",
-    service: "Free Service",
-    price: "€ 80 pp.",
-    image: "/img/menu-2.jpg",
-    description: "A delicious Turkish dinner experience with an elegant atmosphere.",
-
-    menu: {
-      title: "Dinner Menu",
-      items: [
-        "Cold Starters",
-        "Seasonal Salad",
-        "2 Main Course Options",
-        "Dessert",
-        "Fruit Plate",
-        "Unlimited Soft Drinks",
-      ],
-    },
-
-    program: {
-      title: "Night Show Program",
-      items: [
-        "Traditional Folk Dances",
-        "Belly Dancer",
-        "Group Dance Performance",
-        "DJ Performance",
-      ],
-    },
-  },
-
-  "classic-dinner": {
-    title: "Classic Dinner",
-    duration: "1.5 Hours",
     drinks: "Fix Menu",
     service: "Free Service",
-    price: "€ 60 pp.",
-    image: "/img/menu-3.jpg",
+    price: "€ 100 pp.",
+    images: [
+      "/img/menu-meat.jpg",
+      "/img/menu-salmon.jpg",
+      "/img/menu-fish.jpg",
+      "/img/menu-fruit.jpg",
+      "/img/menu-meze-mix.jpg",
+    ],
     description: "Traditional flavors prepared with a classic Turkish dinner setting.",
 
     menu: {
       title: "Dinner Menu",
       items: [
-        "Cold Starters",
-        "Daily Soup",
-        "1 Main Course Option",
+        "Cold Starters (Traditional Turkish Appetizers)",
+        "Fresh Seasonal Salad",
+        "Main Dish with 7 options",
+        " – Meat Casserole with mushroom and mashed potatoes",
+        " – Grilled Salmon Fish served with sea beans",
+        " – Grilled Fish with fresh greens",
+        " – Chicken Steak with rice and french fries",
+        " – Meat Patty with mashed potatoes and cheese",
+        " – Vegetarian Plate (sauteed vegetables)",
+        " – Beef Steak with mashed potatoes",
+        " – Creamy Pasta",
+        "Mixed Nuts",
         "Dessert",
-        "Tea / Water",
+        "Fruit Plate",
+        "DRINKS : Unlimited soft drinks",
+        "Children 0–2 FREE"
       ],
     },
 
     program: {
-      title: "Entertainment Program",
+      title: "Turkish Night Show Program",
       items: [
-        "Live Background Music",
-        "Soft Cultural Performances",
+        "Whirling Dervish",
+        "Shaman Dance",
+        "Turkish Gypsy Dance",
+        "Caucasian Dance",
+        "Belly Dancer Group Show",
+        "Folk Dance Performance",
+        "Belly Dancer",
+        "Professional DJ Performance",
       ],
     },
   },
 
-  "premium-dinner": {
-    title: "Premium Dinner",
-    duration: "1.5 Hours",
+  "vip-menu-dinner-with-alcohol": {
+    title: "Vip Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
+    duration: "2 Hours",
     drinks: "Fix Menu",
     service: "Free Service",
-    price: "€ 60 pp.",
-    image: "/img/menu-4.jpg",
+    price: "€ 120 pp.",
+    images: [
+      "/img/menu-salmon.jpg",
+      "/img/menu-meat.jpg",
+      "/img/menu-fish.jpg",
+      "/img/menu-fruit.jpg",
+      "/img/menu-meze-mix.jpg",
+    ],
     description: "Premium-quality dinner accompanied by a relaxing environment.",
 
     menu: {
       title: "Dinner Menu",
       items: [
-        "Cold Starters",
-        "Fresh Salad",
-        "Premium Main Course Selection",
+        "Cold Starters (Traditional Turkish Appetizers)",
+        "Fresh Seasonal Salad ",
+        "Main Dish with 7 options",
+        " – Meat Casserole with mushroom and mashed potatoes",
+        " – Grilled Salmon Fish",
+        " – Grilled Fish",
+        " – Chicken Steak",
+        " – Meat Patty",
+        " – Vegetarian Plate",
+        " – Beef Steak",
+        " – Creamy Pasta",
+        "Mixed Nuts",
         "Dessert",
-        "Fruit Mix",
+        "Fruit Plate",
+        "DRINKS : Unlimited soft drinks + 2 glasses of alcoholic drinks",
+        "Import drinks are extra",
+        "Children 0–2 FREE"
       ],
     },
 
     program: {
-      title: "Entertainment Program",
+      title: "Show Program",
       items: [
-        "Soft Music",
-        "Background Show",
+        "Whirling Dervish",
+        "Shaman Dance",
+        "Turkish Gypsy Dance",
+        "Caucasian Dance",
+        "Belly Dancer Group Show",
+        "Folk Dance Performance",
+        "Belly Dancer",
+        "Professional DJ Performance",
       ],
     },
   },
 };
+

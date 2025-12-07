@@ -34,47 +34,47 @@ export default function Home() {
       const menuItems = [
     {
       id: 1,
-      name: "VIP Menu Dinner",
-      slug: "vip-menu-dinner",
-      details: "Details",
-      tour: "Tour 3 Hours",
-      drinks: "Unlimited Soft Drinks",
-      service: "Free Service",
-      price: "€ 100 pp.",
-      image: "/img/menu-1.jpg", // public/img/menu klasörüne ekle
-    },
-    {
-      id: 2,
-      name: "Deluxe Dinner",
-      slug: "deluxe-dinner",
+      name: "Fix Menu Dinner",
+      slug: "fix-menu-dinner",
       details: "Details",
       tour: "Tour 2 Hours",
       drinks: "Unlimited Soft Drinks",
       service: "Free Service",
-      price: "€ 80 pp.",
-      image: "/img/menu-2.jpg",
+      price: "€ 60 pp.",
+      image: "/img/menu-chicken.jpg",
+    },
+    {
+      id: 2,
+      name: "Fix Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
+      slug: "fix-menu-dinner-with-alcohol",
+      details: "Details",
+      tour: "Tour 2 Hours",
+      drinks: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
+      service: "Free Service",
+      price: "€ 70 pp.",
+      image: "/img/menu-fish.jpg",
     },
     {
       id: 3,
-      name: "Classic Dinner",
-      slug: "classic-dinner",
+      name: "Vip Menu Dinner (Unlimited Soft Drinks)",
+      slug: "vip-menu-dinner",
       details: "Details",
-      tour: "Tour 1.5 Hours",
+      tour: "Tour 2 Hours",
       drinks: "Fix Menu",
       service: "Free Service",
-      price: "€ 60 pp.",
-      image: "/img/menu-3.jpg",
+      price: "€ 100 pp.",
+      image: "/img/menu-meat.jpg",
     },
      {
       id: 4,
-      name: "Premium Dinner",
-      slug: "premium-dinner",
+      name: "Vip Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
+      slug: "vip-menu-dinner-with-alcohol",
       details: "Details",
-      tour: "Tour 1.5 Hours",
-      drinks: "Fix Menu",
+      tour: "Tour 2 Hours",
+      drinks: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
       service: "Free Service",
-      price: "€ 60 pp.",
-      image: "/img/menu-4.jpg",
+      price: "€ 120 pp.",
+      image: "/img/menu-salmon.jpg",
     },
   ];
 
@@ -82,8 +82,8 @@ export default function Home() {
   return (
     <>
       <FullscreenSlider slides={slidesData} autoPlay autoPlayInterval={5000} />
-      <MainPageAboutUs />
       <MenuCards items={menuItems} />
+      <MainPageAboutUs />
     </>
   );
 }

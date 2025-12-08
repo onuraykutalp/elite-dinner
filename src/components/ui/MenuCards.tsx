@@ -3,18 +3,23 @@
 import React from "react";
 import Link from "next/link";
 import { BiFoodMenu, BiSolidDrink } from "react-icons/bi";
+import { FaVanShuttle } from "react-icons/fa6";
+import { BsFillCupFill } from "react-icons/bs";
+
 import { MdRoomService } from "react-icons/md";
 
 type MenuItem = {
   id: number | string;
   slug: string;
   name: string;
+  subtitle: string;
   details: string;
   tour: string;
   drinks: string;
   service: string;
   price: string;
   image: string;
+  alcohol?: string;
 };
 
 type MenuCardsProps = {
@@ -35,35 +40,58 @@ export function MenuCards({ items }: MenuCardsProps) {
               key={item.id}
               className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col"
             >
-              {/* Image */}
               <div className="h-56 w-full overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                />
+                <Link href={`/tours/${item.slug}`}>
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  />
+                </Link>
               </div>
 
               {/* Content */}
               <div className="p-6 flex flex-col justify-between flex-1">
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-gray-800">{item.name}</h3>
-                  <p className="text-gray-600 text-sm">{item.details}</p>
+                  <Link href={`/tours/${item.slug}`}>
+                    <h3 className="text-xl font-semibold text-gray-800">{item.name}</h3>
+                  </Link>
+                    {item.subtitle.includes("+") ? (
+                    <>
+                        <p className="text-gray-500 leading-tight mb-1 mt-3">
+                        {item.subtitle.split("+")[0]}
+                        </p>
+                        <p className="text-gray-500 leading-tight md:mb-[-14px]">
+                        {item.subtitle.split("+")[1]}
+                        </p>
+                    </>
+                    ) : (
+                    <p className="text-gray-500 mt-3">{item.subtitle}</p>
+                    )}
+                  <p className="text-gray-600 text-sm mt-6">{item.details}</p>
 
                   {/* Stylish parameter list */}
                   <ul className="space-y-2">
                     <li className="flex items-center text-gray-700 text-sm">
-                      <BiSolidDrink className="h-5 w-5 mr-2 text-rose-600" />
+
+                      <img src="/icons/meal-icon.png" alt="menu icon" className="h-5 w-5 mr-2 text-rose-600" />
                       {item.tour}
                     </li>
 
                     <li className="flex items-center text-gray-700 text-sm">
-                      <BiFoodMenu className="h-5 w-5 mr-2 text-rose-600" />
+                      <BsFillCupFill className="h-5 w-5 mr-2 text-rose-600" />
                       {item.drinks}
                     </li>
 
+                    {item.alcohol && (
+                      <li className="flex items-center text-gray-700 text-sm">
+                      <BiSolidDrink className="h-5 w-5 mr-2 text-rose-600" />
+                        {item.alcohol}
+                      </li>
+                    )}
+
                     <li className="flex items-center text-gray-700 text-sm">
-                      <MdRoomService className="h-5 w-5 mr-2 text-rose-600" />
+                      <FaVanShuttle className="h-5 w-5 mr-2 text-rose-600" />
                       {item.service}
                     </li>
                   </ul>

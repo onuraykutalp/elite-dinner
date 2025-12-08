@@ -2,6 +2,7 @@ import { Footer } from "@/components/ui/Footer";
 import { FullscreenSlider, Slide } from "@/components/ui/FullScreenSlider";
 import { MainPageAboutUs } from "@/components/ui/MainPageAboutUs";
 import { MenuCards } from "@/components/ui/MenuCards";
+import { sub } from "framer-motion/client";
 import Image from "next/image";
 
 export default function Home() {
@@ -34,50 +35,57 @@ export default function Home() {
       const menuItems = [
     {
       id: 1,
-      name: "Fix Menu Dinner (Unlimited Soft Drinks)",
+      name: "Fix Menu Dinner",
+      subtitle: "Unlimited Soft Drinks",
       slug: "fix-menu-dinner",
       details: "Details",
-      tour: "Tour 2 Hours",
+      tour: "Full Course Meal",
       drinks: "Unlimited Soft Drinks",
-      service: "Free Service",
+      alcohol: "",
+      service: "Free Pick up Drop of",
       price: "€ 60 pp.",
       image: "/img/menu-chicken.jpg",
     },
     {
       id: 2,
-      name: "Fix Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
+      name: "Fix Menu Dinner",
+      subtitle: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
       slug: "fix-menu-dinner-with-alcohol",
       details: "Details",
-      tour: "Tour 2 Hours",
-      drinks: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
-      service: "Free Service",
+      tour: "Full Course Meal",
+      drinks: "Unlimited Soft Drinks",
+      alcohol: "2 Glasses of Alcohol",
+      service: "Free Pick up Drop of",
       price: "€ 70 pp.",
       image: "/img/menu-fish.jpg",
     },
     {
       id: 3,
-      name: "Vip Menu Dinner (Unlimited Soft Drinks)",
+      name: "Vip Menu Dinner",
+      subtitle: "Unlimited Soft Drinks",
       slug: "vip-menu-dinner",
       details: "Details",
-      tour: "Tour 2 Hours",
+      tour: "Full Course Meal",
       drinks: "Unlimited Soft Drinks",
-      service: "Free Service",
+      alcohol: "",
+      service: "Free Pick up Drop of",
       price: "€ 100 pp.",
       image: "/img/menu-meat.jpg",
     },
      {
       id: 4,
-      name: "Vip Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
+      name: "Vip Menu Dinner",
+      subtitle: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
       slug: "vip-menu-dinner-with-alcohol",
       details: "Details",
-      tour: "Tour 2 Hours",
-      drinks: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
-      service: "Free Service",
+      tour: "Full Course Meal",
+      drinks: "Unlimited Soft Drinks",
+      alcohol: "2 Glasses of Alcohol",
+      service: "Free Pick up Drop of",
       price: "€ 120 pp.",
       image: "/img/menu-salmon.jpg",
     },
   ];
-
 
   return (
     <>

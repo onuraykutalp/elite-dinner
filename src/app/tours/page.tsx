@@ -4,7 +4,8 @@ import React from 'react'
 const menuItems = [
     {
       id: 1,
-      name: "Fix Menu Dinner (Unlimited Soft Drinks)",
+      name: "Fix Menu Dinner",
+      subtitle: "Unlimited Soft Drinks",
       slug: "fix-menu-dinner",
       details: "Details",
       tour: "Full Course Meal",
@@ -16,7 +17,8 @@ const menuItems = [
     },
     {
       id: 2,
-      name: "Fix Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
+      name: "Fix Menu Dinner",
+      subtitle: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
       slug: "fix-menu-dinner-with-alcohol",
       details: "Details",
       tour: "Full Course Meal",
@@ -28,7 +30,8 @@ const menuItems = [
     },
     {
       id: 3,
-      name: "Vip Menu Dinner (Unlimited Soft Drinks)",
+      name: "Vip Menu Dinner",
+      subtitle: "Unlimited Soft Drinks",
       slug: "vip-menu-dinner",
       details: "Details",
       tour: "Full Course Meal",
@@ -40,7 +43,8 @@ const menuItems = [
     },
      {
       id: 4,
-      name: "Vip Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
+      name: "Vip Menu Dinner",
+      subtitle: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
       slug: "vip-menu-dinner-with-alcohol",
       details: "Details",
       tour: "Full Course Meal",

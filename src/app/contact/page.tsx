@@ -51,7 +51,7 @@ export default function ContactPage() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-20"
                 >
-                   
+
                 </motion.div>
 
                 {/* GRID */}
@@ -71,7 +71,7 @@ export default function ContactPage() {
                                 <Phone className="w-7 h-7 text-rose-600" />
                                 <div>
                                     <p className="font-semibold text-gray-800">Phone</p>
-                                    <p>+90 552 600 38 27</p>
+                                    <p>+90 541 339 78 30</p>
                                 </div>
                             </div>
 
@@ -79,7 +79,7 @@ export default function ContactPage() {
                                 <Mail className="w-7 h-7 text-rose-600" />
                                 <div>
                                     <p className="font-semibold text-gray-800">E-mail</p>
-                                    <p>info@elitedinnercruise.com</p>
+                                    <a href="mailto:reservation@elitedinnercruise.com"><p>reservation@elitedinnercruise.com</p></a>
                                 </div>
                             </div>
 
@@ -87,7 +87,14 @@ export default function ContactPage() {
                                 <MapPin className="w-7 h-7 text-rose-600" />
                                 <div>
                                     <p className="font-semibold text-gray-800">Address</p>
-                                    <p>Kuruçeşme Mah. Park Yolu, Beşiktaş / Istanbul</p>
+                                    <a
+                                        href="https://maps.app.goo.gl/QBPkM4DEBJCDmd3q8"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:text-rose-400 transition"
+                                    >
+                                        <p>Omer Avni Mah. Meclis-i Mebusan Cd., 34000 Beyoglu/Istanbul</p>
+                                    </a>
                                 </div>
                             </div>
 
@@ -164,18 +171,21 @@ export default function ContactPage() {
 
                     <div className="rounded-3xl overflow-hidden h-[380px] shadow-md border">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18..."
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12041.545491091696!2d28.9894256!3d41.0340731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab779e6e8b7b1%3A0x6e7e0e92ce40938e!2sOmer%20Avni%20Mah.%20Meclis-i%20Mebusan%20Cd.%2C%2034000%20Beyoglu%2FIstanbul!5e0!3m2!1str!2str!4v1718030000000!5m2!1str!2str"
                             width="100%"
                             height="100%"
                             loading="lazy"
                             allowFullScreen
-                        ></iframe>
+                            referrerPolicy="no-referrer-when-downgrade"
+                            style={{ border: 0 }}
+                        />
                     </div>
+
                 </div>
 
                 {/* WHATSAPP FLOATING BUTTON */}
                 <a
-                    href="https://wa.me/905526003827"
+                    href="https://wa.me/905413397830"
                     target="_blank"
                     className="fixed bottom-7 right-7 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all"
                 >

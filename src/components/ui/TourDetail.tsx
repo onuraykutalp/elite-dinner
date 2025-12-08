@@ -104,6 +104,9 @@ export default function TourDetail({ tour }: { tour: any }) {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-gray-900">
             {tour.title}
           </h1>
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8 text-rose-400">
+            {tour.subtitle}
+          </h3>
 
           <div className="rounded-3xl overflow-hidden shadow-xl mb-5 cursor-pointer group relative">
             <img
@@ -140,13 +143,25 @@ export default function TourDetail({ tour }: { tour: any }) {
             <div className="bg-white border rounded-2xl p-5 shadow-sm">
               <ul className="space-y-3">
                 {tour.menu.items.map((item: string, index: number) => (
-                  <li
+                    <li
                     key={index}
                     className="flex text-gray-700 text-sm sm:text-base"
-                  >
+                    >
                     <span className="text-rose-500 mr-2">•</span>
-                    {item}
-                  </li>
+                    {typeof item === "string" && item.toLowerCase().includes("not included") ? (
+                      <span>
+                        {item.split(/(not included)/i).map((part, i) =>
+                          part.toLowerCase() === "not included" ? (
+                            <b className="text-rose-500" key={i}>{part}</b>
+                          ) : (
+                            part
+                          )
+                        )}
+                      </span>
+                    ) : (
+                      item
+                    )}
+                    </li>
                 ))}
               </ul>
             </div>
@@ -178,7 +193,7 @@ export default function TourDetail({ tour }: { tour: any }) {
           <div className="bg-white shadow-xl rounded-3xl p-6 sm:p-8 border border-gray-200">
 
             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
-              Booking Information
+              Tour Highlights
             </h3>
 
             <div className="space-y-4 text-gray-700 text-base sm:text-lg">
@@ -193,7 +208,7 @@ export default function TourDetail({ tour }: { tour: any }) {
               </p>
 
               <p className="flex justify-between">
-                <span className="font-medium">🚖 Service:</span>
+                <span className="font-medium">🚖 Transfer:</span>
                 <span>{tour.service}</span>
               </p>
 

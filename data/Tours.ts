@@ -1,5 +1,6 @@
 export type Tour = {
   title: string;
+  subtitle: string;
   duration: string;
   drinks: string;
   service: string;
@@ -21,20 +22,20 @@ export type Tour = {
 
 export const tours: Record<string, Tour> = {
   "fix-menu-dinner": {
-    title: "Fix Menu Dinner (Unlimited Soft Drinks)",
+    title: "Fix Menu Dinner",
+    subtitle: "Unlimited Soft Drinks",
     duration: "3 Hours",
     drinks: "Unlimited Soft",
-    service: "Free Service",
+    service: "Free Shuttle",
     price: "€ 60 pp.",
     images: [
-      "/img/menu-chicken.jpg",
-      "/img/menu-meat.jpg",
       "/img/menu-fish.jpg",
+      "/img/menu-chicken.jpg",
       "/img/menu-food.jpg",
       "/img/menu-pasta.jpg",
        "/img/menu-meze-mix-1.jpg",
     ],
-    description: "Special luxury dinner experience with a rich Turkish menu.",
+    description: "Our friendly, experienced team will serve you during the night and you will have the opportunity to explore the Bosphorus more closely with the departure of our ship from the pier. While you are exploring the Bosphorus shores of Istanbul, the hidden capital of the world, you will also be amazed by the different dance shows prepared by our animation team while discovering the flavors of the rich Turkish cuisine.",
 
     menu: {
       title: "Dinner Menu & Drinks",
@@ -67,20 +68,20 @@ export const tours: Record<string, Tour> = {
   },
 
   "fix-menu-dinner-with-alcohol": {
-    title: "Fix Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
-    duration: "2 Hours",
-    drinks: "Unlimited Soft + 2 Alcoholic",
-    service: "Free Service",
+    title: "Fix Menu Dinner",
+    subtitle: "Unlimited Soft Drinks & 2 Alcoholic Drinks",
+    duration: "3 Hours",
+    drinks: "2 Glass of Alcoholic",
+    service: "Free Shuttle",
     price: "€ 70 pp.",
     images: [
       "/img/menu-fish.jpg",
-      "/img/menu-meat.jpg",
       "/img/menu-chicken.jpg",
       "/img/menu-food.jpg",
       "/img/menu-pasta.jpg",
       "/img/menu-meze-mix-1.jpg",
     ],
-    description: "A delicious Turkish dinner experience with an elegant atmosphere.",
+    description: "Our friendly, experienced team will serve you during the night and you will have the opportunity to explore the Bosphorus more closely with the departure of our ship from the pier. While you are exploring the Bosphorus shores of Istanbul, the hidden capital of the world, you will also be amazed by the different dance shows prepared by our animation team while discovering the flavors of the rich Turkish cuisine.",
 
     menu: {
       title: "Dinner Menu",
@@ -93,8 +94,8 @@ export const tours: Record<string, Tour> = {
         "Meat Patty with mashed potatoes and cheese",
         "Vegetarian Plate (sauteed vegetables)",
         "Creamy Pasta",
-        "DRINKS : Unlimited soft drinks such as coke, fanta, sprite, juice, tea, coffee + 2 Glasses of local alcoholic drinks (wine, raki, beer)",
-        "Import drinks are not included and available with an extra charge on the boat."
+        "DRINKS : Unlimited soft drinks such as coke, fanta, sprite, juice, tea, coffee + 2 Glasses of local alcoholic drinks (wine, raki, beer, vodka, gin)",
+        "Import drinks are not included and available with an extra charge on the boat. (such as whiskey, tequila, champagne, cognac etc.)"
       ],
     },
 
@@ -114,10 +115,11 @@ export const tours: Record<string, Tour> = {
   },
 
   "vip-menu-dinner": {
-    title: "Vip Menu Dinner (Unlimited Soft Drinks)",
-    duration: "2 Hours",
+    title: "Vip Menu Dinner",
+    subtitle: "Unlimited Soft Drinks",
+    duration: "3 Hours",
     drinks: "Unlimited Soft",
-    service: "Free Service",
+    service: "Free Shuttle",
     price: "€ 100 pp.",
     images: [
       "/img/menu-meat.jpg",
@@ -126,7 +128,7 @@ export const tours: Record<string, Tour> = {
       "/img/menu-fruit.jpg",
       "/img/menu-meze-mix.jpg",
     ],
-    description: "Traditional flavors prepared with a classic Turkish dinner setting.",
+    description: "Our friendly, experienced team will serve you during the night and you will have the opportunity to explore the Bosphorus more closely with the departure of our ship from the pier. While you are exploring the Bosphorus shores of Istanbul, the hidden capital of the world, you will also be amazed by the different dance shows prepared by our animation team while discovering the flavors of the rich Turkish cuisine.",
 
     menu: {
       title: "Dinner Menu",
@@ -140,13 +142,11 @@ export const tours: Record<string, Tour> = {
         " – Chicken Steak with rice and french fries",
         " – Meat Patty with mashed potatoes and cheese",
         " – Vegetarian Plate (sauteed vegetables)",
-        " – Beef Steak with mashed potatoes",
         " – Creamy Pasta",
         "Mixed Nuts",
         "Dessert",
         "Fruit Plate",
-        "DRINKS : Unlimited soft drinks",
-        "Children 0–2 FREE"
+        "DRINKS : Unlimited soft drinks such as coke, fanta, sprite, juice, tea, coffee",
       ],
     },
 
@@ -166,10 +166,11 @@ export const tours: Record<string, Tour> = {
   },
 
   "vip-menu-dinner-with-alcohol": {
-    title: "Vip Menu Dinner (with 2 Glasses of Alcoholic Drinks)",
-    duration: "2 Hours",
-    drinks: "Unlimited Soft + 2 Alcoholic",
-    service: "Free Service",
+    title: "Vip Menu Dinner",
+    subtitle: "Unlimited Soft Drinks & Unlimited Local Alcoholic Drinks",
+    duration: "3 Hours",
+    drinks: "Unlimited Alcoholic",
+    service: "Free Shuttle",
     price: "€ 120 pp.",
     images: [
       "/img/menu-salmon.jpg",
@@ -178,28 +179,27 @@ export const tours: Record<string, Tour> = {
       "/img/menu-fruit.jpg",
       "/img/menu-meze-mix.jpg",
     ],
-    description: "Premium-quality dinner accompanied by a relaxing environment.",
+    description: "Our friendly, experienced team will serve you during the night and you will have the opportunity to explore the Bosphorus more closely with the departure of our ship from the pier. While you are exploring the Bosphorus shores of Istanbul, the hidden capital of the world, you will also be amazed by the different dance shows prepared by our animation team while discovering the flavors of the rich Turkish cuisine.",
 
     menu: {
       title: "Dinner Menu",
       items: [
         "Cold Starters (Traditional Turkish Appetizers)",
-        "Fresh Seasonal Salad ",
+        "Fresh Seasonal Salad",
         "Main Dish with 7 options",
         " – Meat Casserole with mushroom and mashed potatoes",
-        " – Grilled Salmon Fish",
-        " – Grilled Fish",
-        " – Chicken Steak",
-        " – Meat Patty",
-        " – Vegetarian Plate",
-        " – Beef Steak",
+        " – Grilled Salmon Fish served with sea beans",
+        " – Grilled Fish with fresh greens",
+        " – Chicken Steak with rice and french fries",
+        " – Meat Patty with mashed potatoes and cheese",
+        " – Vegetarian Plate (sauteed vegetables)",
         " – Creamy Pasta",
         "Mixed Nuts",
         "Dessert",
         "Fruit Plate",
-        "DRINKS : Unlimited soft drinks + 2 glasses of alcoholic drinks",
-        "Import drinks are extra",
-        "Children 0–2 FREE"
+        "DRINKS : Unlimited soft drinks such as coke, fanta, sprite, juice, tea, coffee",
+        "Unlimited local alcoholic drinks (includes wine, raki, beer, vodka, gin)",
+        "Import drinks are not included and available with an extra charge on the boat. (such as whiskey, tequila, champagne, cognac etc.)"
       ],
     },
 

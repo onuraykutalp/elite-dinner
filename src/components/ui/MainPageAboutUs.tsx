@@ -15,7 +15,7 @@ export function MainPageAboutUs() {
             About Elite Dinner Cruise
           </h2>
           <p className="mt-4 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-            EliteDinner offers a premium dining experience combining gourmet flavors, elegant ambiance, and unforgettable memories. Our passion for culinary perfection ensures every meal is a delight.
+            Elite Dinner Cruise offers a premium dining experience combining gourmet flavors, elegant ambiance, and unforgettable memories. Our passion for culinary perfection ensures every meal is a delight.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export function MainPageAboutUs() {
             onClick={() => setIsVideoOpen(true)}
           >
             <img
-              src="/img/about-us.jpg" // Thumbnail veya custom image
+              src="/img/about-us.jpg" 
               alt="EliteDinner Video"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
             />
@@ -45,14 +45,14 @@ export function MainPageAboutUs() {
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-gray-900">Our Story</h3>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Founded with a vision to redefine fine dining, EliteDinner brings together culinary artistry, exquisite flavors, and exceptional service. Every dish is crafted with fresh, high-quality ingredients and a touch of creativity.
+              Founded with a vision to redefine fine dining, Elite Dinner Cruise brings together culinary artistry, exquisite flavors, and exceptional service. Every dish is crafted with fresh, high-quality ingredients and a touch of creativity.
             </p>
             <p className="text-gray-700 text-lg leading-relaxed">
               From intimate dinners to grand celebrations, our team ensures a memorable experience for every guest. Elegance, luxury, and passion for food define us.
             </p>
 
             <a
-              href="#booking"
+              href="/tours"
               className="inline-block mt-4 px-6 py-3 rounded-full bg-rose-600 text-white font-medium shadow hover:shadow-lg hover:bg-rose-500 transition"
             >
               Make a Reservation

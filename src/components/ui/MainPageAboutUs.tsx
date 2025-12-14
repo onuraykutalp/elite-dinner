@@ -24,10 +24,18 @@ export function MainPageAboutUs() {
           <div
             className="relative h-80 md:h-[500px] rounded-3xl overflow-hidden shadow-lg cursor-pointer group"
             onClick={() => setIsVideoOpen(true)}
+            role="button"
+            tabIndex={0}
+            aria-label="Watch Elite Dinner Cruise video"
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                setIsVideoOpen(true);
+              }
+            }}
           >
             <img
               src="/img/about-us.jpg" 
-              alt="EliteDinner Video"
+              alt="Elite Dinner Cruise - About Us - Luxury Bosphorus Dinner Cruise Experience"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -54,6 +62,7 @@ export function MainPageAboutUs() {
             <a
               href="/tours"
               className="inline-block mt-4 px-6 py-3 rounded-full bg-rose-600 text-white font-medium shadow hover:shadow-lg hover:bg-rose-500 transition"
+              aria-label="Make a reservation for Elite Dinner Cruise"
             >
               Make a Reservation
             </a>
@@ -67,13 +76,14 @@ export function MainPageAboutUs() {
                 width="100%"
                 height="100%"
                 src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                title="EliteDinner Video"
+                title="Elite Dinner Cruise - Luxury Bosphorus Dinner Cruise Experience"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
               <button
                 onClick={() => setIsVideoOpen(false)}
                 className="absolute top-4 right-4 text-white text-3xl font-bold hover:text-rose-500 transition"
+                aria-label="Close video"
               >
                 &times;
               </button>

@@ -41,10 +41,10 @@ export function MenuCards({ items }: MenuCardsProps) {
               className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col"
             >
               <div className="h-56 w-full overflow-hidden">
-                <Link href={`/tours/${item.slug}`}>
+                <Link href={`/tours/${item.slug}`} aria-label={`View details for ${item.name} - ${item.subtitle}`}>
                   <img
                     src={item.image}
-                    alt={item.name}
+                    alt={`${item.name} - ${item.subtitle} - Elite Dinner Cruise`}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   />
                 </Link>
@@ -53,7 +53,7 @@ export function MenuCards({ items }: MenuCardsProps) {
               {/* Content */}
               <div className="p-6 flex flex-col justify-between flex-1">
                 <div className="space-y-4">
-                  <Link href={`/tours/${item.slug}`}>
+                  <Link href={`/tours/${item.slug}`} aria-label={`View details for ${item.name}`}>
                     <h3 className="text-xl font-semibold text-gray-800">{item.name}</h3>
                   </Link>
                     {item.subtitle.includes("+") ? (
@@ -74,7 +74,7 @@ export function MenuCards({ items }: MenuCardsProps) {
                   <ul className="space-y-2">
                     <li className="flex items-center text-gray-700 text-sm">
 
-                      <img src="/icons/meal-icon.png" alt="menu icon" className="h-5 w-5 mr-2 text-rose-600" />
+                      <img src="/icons/meal-icon.png" alt="Menu icon" className="h-5 w-5 mr-2 text-rose-600" />
                       {item.tour}
                     </li>
 
@@ -103,6 +103,7 @@ export function MenuCards({ items }: MenuCardsProps) {
                   <Link
                     href={`/tours/${item.slug}`}
                     className="px-4 py-2 bg-[#fe7695] text-white rounded-full text-sm font-medium hover:bg-rose-500 transition"
+                    aria-label={`View details for ${item.name} - ${item.subtitle}`}
                   >
                     View Details
                   </Link>

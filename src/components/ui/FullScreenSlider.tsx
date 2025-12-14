@@ -61,7 +61,7 @@ export function FullscreenSlider({
         {slides.map((s) => (
           <div key={s.id} className="min-w-full flex-shrink-0 relative h-screen md:h-[90vh]">
             {/* Background image using next/image fill */}
-            <Image src={s.image} alt={s.title} fill className="object-cover" priority />
+            <Image src={s.image} alt={`${s.title} - ${s.subtitle || 'Elite Dinner Cruise'}`} fill className="object-cover" priority />
 
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent z-10" />
@@ -82,6 +82,7 @@ export function FullscreenSlider({
                 <a
                   href={s.cta.href}
                   className="inline-block mt-6 px-5 py-3 bg-rose-600 rounded-full text-white font-medium shadow hover:scale-[1.02] transition-transform"
+                  aria-label={`${s.cta.label} - ${s.title}`}
                 >
                   {s.cta.label}
                 </a>

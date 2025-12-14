@@ -1,6 +1,7 @@
 export type Tour = {
   title: string;
   subtitle: string;
+  mailTitle?: string;
   duration: string;
   drinks: string;
   service: string;
@@ -24,6 +25,7 @@ export const tours: Record<string, Tour> = {
   "fix-menu-dinner": {
     title: "Fix Menu Dinner",
     subtitle: "Unlimited Soft Drinks",
+    mailTitle:"Fix Menu Dinner V2",
     duration: "3 Hours",
     drinks: "Unlimited Soft",
     service: "Free Shuttle",
@@ -70,6 +72,7 @@ export const tours: Record<string, Tour> = {
   "fix-menu-dinner-with-alcohol": {
     title: "Fix Menu Dinner",
     subtitle: "Unlimited Soft Drinks & 2 Alcoholic Drinks",
+    mailTitle:"Fix Menu Dinner V1",
     duration: "3 Hours",
     drinks: "2 Glass of Alcoholic",
     service: "Free Shuttle",
@@ -117,6 +120,7 @@ export const tours: Record<string, Tour> = {
   "vip-menu-dinner": {
     title: "Vip Menu Dinner",
     subtitle: "Unlimited Soft Drinks",
+    mailTitle:"Vip Menu Dinner V2",
     duration: "3 Hours",
     drinks: "Unlimited Soft",
     service: "Free Shuttle",
@@ -168,6 +172,7 @@ export const tours: Record<string, Tour> = {
   "vip-menu-dinner-with-alcohol": {
     title: "Vip Menu Dinner",
     subtitle: "Unlimited Soft Drinks & Unlimited Local Alcoholic Drinks",
+    mailTitle:"Vip Menu Dinner V1",
     duration: "3 Hours",
     drinks: "Unlimited Alcoholic",
     service: "Free Shuttle",

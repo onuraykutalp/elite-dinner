@@ -4,6 +4,44 @@ import { MainPageAboutUs } from "@/components/ui/MainPageAboutUs";
 import { MenuCards } from "@/components/ui/MenuCards";
 import { sub } from "framer-motion/client";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Elite Dinner Cruise | Luxury Bosphorus Dinner Cruise Istanbul",
+  description: "Experience the magic of Istanbul with Elite Dinner Cruise. Enjoy a luxury 3-hour Bosphorus cruise with full-course Turkish cuisine, unlimited drinks, Turkish night shows, and breathtaking views. Book your unforgettable dinner cruise experience today.",
+  keywords: [
+    "dinner cruise Istanbul",
+    "Bosphorus dinner cruise",
+    "luxury cruise Istanbul",
+    "Turkish night cruise",
+    "Istanbul dinner boat",
+    "Bosphorus tour",
+    "luxury dining cruise",
+    "Istanbul cruise experience",
+  ],
+  openGraph: {
+    title: "Elite Dinner Cruise | Luxury Bosphorus Dinner Cruise Istanbul",
+    description: "Experience the magic of Istanbul with Elite Dinner Cruise. Enjoy a luxury 3-hour Bosphorus cruise with full-course Turkish cuisine, unlimited drinks, Turkish night shows, and breathtaking views.",
+    url: "https://www.elitedinnercruise.com",
+    images: [
+      {
+        url: "https://www.elitedinnercruise.com/slider/slider.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Elite Dinner Cruise - Luxury Bosphorus Experience",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Elite Dinner Cruise | Luxury Bosphorus Dinner Cruise Istanbul",
+    description: "Experience the magic of Istanbul with Elite Dinner Cruise. Enjoy a luxury 3-hour Bosphorus cruise with full-course Turkish cuisine, unlimited drinks, Turkish night shows, and breathtaking views.",
+    images: ["https://www.elitedinnercruise.com/slider/slider.jpeg"],
+  },
+  alternates: {
+    canonical: "https://www.elitedinnercruise.com",
+  },
+};
 
 export default function Home() {
 
@@ -38,7 +76,7 @@ export default function Home() {
       name: "Fix Menu Dinner",
       subtitle: "Unlimited Soft Drinks",
       slug: "fix-menu-dinner",
-      details: "Details",
+      details: "Shared Table",
       tour: "Full Course Meal",
       drinks: "Unlimited Soft Drinks",
       alcohol: "",
@@ -51,7 +89,7 @@ export default function Home() {
       name: "Fix Menu Dinner",
       subtitle: "Unlimited Soft Drinks + 2 Alcoholic Drinks",
       slug: "fix-menu-dinner-with-alcohol",
-      details: "Details",
+      details: "Shared Table",
       tour: "Full Course Meal",
       drinks: "Unlimited Soft Drinks",
       alcohol: "2 Glasses of Alcohol",
@@ -64,7 +102,7 @@ export default function Home() {
       name: "Vip Menu Dinner",
       subtitle: "Unlimited Soft Drinks",
       slug: "vip-menu-dinner",
-      details: "Details",
+      details: "Private Table Near Stage",
       tour: "Full Course Meal",
       drinks: "Unlimited Soft Drinks",
       alcohol: "",
@@ -77,7 +115,7 @@ export default function Home() {
       name: "Vip Menu Dinner",
       subtitle: "Unlimited Soft Drinks + Unlimited Alcoholic Drinks",
       slug: "vip-menu-dinner-with-alcohol",
-      details: "Details",
+      details: "Private Table Near Stage",
       tour: "Full Course Meal",
       drinks: "Unlimited Soft Drinks",
       alcohol: "Unlimited Local Alcoholic Drinks",
@@ -88,10 +126,10 @@ export default function Home() {
   ];
 
   return (
-    <>
+    <main>
       <FullscreenSlider slides={slidesData} autoPlay autoPlayInterval={5000} />
       <MenuCards items={menuItems} />
       <MainPageAboutUs />
-    </>
+    </main>
   );
 }

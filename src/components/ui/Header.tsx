@@ -6,16 +6,16 @@ export function Header() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex items-center justify-between h-[70px] sm:h-[120px] md:h-[150px] lg:h-[180px]">
                     <div className="flex items-center gap-4">
-                        <a href="/" className="flex items-center gap-3">
+                        <a href="/" className="flex items-center gap-3" aria-label="Elite Dinner Cruise Home">
                             <img
                                 src="/img/logo1.png"
-                                alt="EliteDinner Logo"
+                                alt="Elite Dinner Cruise - Luxury Bosphorus Dinner Cruise Istanbul"
                                 className="h-14 sm:h-16 md:h-20 lg:h-24 object-contain"
                             />
                         </a>
                     </div>
 
-                    <nav className="hidden md:flex items-center gap-6 text-sm">
+                    <nav className="hidden md:flex items-center gap-6 text-sm" aria-label="Main navigation">
                         <a href="/" className="hover:text-rose-600 transition font-semibold text-white text-xl">Home</a>
                         <a href="/tours" className="hover:text-rose-600 transition font-semibold text-white text-xl">Tours</a>
                         <a href="/gallery" className="hover:text-rose-600 transition font-semibold text-white text-xl">Gallery</a>
@@ -24,7 +24,7 @@ export function Header() {
                     </nav>
 
                     <div className="flex items-center gap-3">
-                        <a href="#booking" className="hidden md:inline-block px-4 py-2 rounded-full bg-rose-600 text-white text-sm shadow hover:shadow-lg transition">Book Now</a>
+                        <a href="/tours" className="hidden md:inline-block px-4 py-2 rounded-full bg-rose-600 text-white text-sm shadow hover:shadow-lg transition" aria-label="Book your dinner cruise now">Book Now</a>
 
                         {/* Mobile menu button */}
                         <button
@@ -46,14 +46,15 @@ export function Header() {
                 </div>
 
                 {/* Mobile menu */}
-                <div id="mobile-menu" className="hidden md:hidden py-2">
+                <nav id="mobile-menu" className="hidden md:hidden py-2" aria-label="Mobile navigation">
                     <div className="flex flex-col gap-2 px-2 pb-4">
-                        <a href="#menu" className="px-3 py-2 rounded hover:bg-slate-50">Menu</a>
-                        <a href="#about" className="px-3 py-2 rounded hover:bg-slate-50">About Us</a>
-                        <a href="#booking" className="px-3 py-2 rounded hover:bg-slate-50">Transportation</a>
-                        <a href="#contact" className="px-3 py-2 rounded hover:bg-slate-50">Contact</a>
+                        <a href="/" className="px-3 py-2 rounded hover:bg-slate-50">Home</a>
+                        <a href="/tours" className="px-3 py-2 rounded hover:bg-slate-50">Tours</a>
+                        <a href="/gallery" className="px-3 py-2 rounded hover:bg-slate-50">Gallery</a>
+                        <a href="/transportation" className="px-3 py-2 rounded hover:bg-slate-50">Transportation</a>
+                        <a href="/contact" className="px-3 py-2 rounded hover:bg-slate-50">Contact</a>
                     </div>
-                </div>
+                </nav>
             </div>
         </header>
     );

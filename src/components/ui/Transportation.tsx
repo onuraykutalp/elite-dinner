@@ -30,7 +30,7 @@ export function Transportation() {
                 ]}
             />
 
-            <section className="bg-white py-20 sm:pt-20">
+            <main className="bg-white py-20 sm:pt-20">
                 <div className="max-w-6xl mx-auto px-6">
 
                     {/* Başlık */}
@@ -45,35 +45,35 @@ export function Transportation() {
 
                     {/* TABLE / GRID */}
                     <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-200">
-
-                        {/* Header */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-100 text-gray-800 font-semibold text-sm md:text-base">
-                            <div className="py-4 px-6 border-b md:border-b-0 md:border-r border-gray-200 flex items-center">
-                                <span className="mr-2">📍</span> LOCATION
-                            </div>
-                            <div className="py-4 px-6 border-b md:border-b-0 border-gray-200 flex items-center">
-                                <span className="mr-2">⏰</span> TRANSPORTATION TIME
-                            </div>
-                        </div>
-
-                        {/* Rows */}
-                        <div>
-                            {serviceData.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className={`grid grid-cols-1 md:grid-cols-2 text-gray-700 text-sm md:text-base ${
-                                        index % 2 === 0 ? "bg-white" : "bg-gray-50"
-                                    }`}
-                                >
-                                    <div className="py-4 px-6 border-b md:border-b-0 md:border-r border-gray-200">
-                                        {item.area}
-                                    </div>
-                                    <div className="py-4 px-6 border-b border-gray-200">
-                                        {item.time}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        <table className="w-full" role="table" aria-label="Free shuttle service locations and pick-up times">
+                            <thead>
+                                <tr className="grid grid-cols-1 md:grid-cols-2 bg-gray-100 text-gray-800 font-semibold text-sm md:text-base">
+                                    <th className="py-4 px-6 border-b md:border-b-0 md:border-r border-gray-200 flex items-center" scope="col">
+                                        <span className="mr-2" aria-hidden="true">📍</span> LOCATION
+                                    </th>
+                                    <th className="py-4 px-6 border-b md:border-b-0 border-gray-200 flex items-center" scope="col">
+                                        <span className="mr-2" aria-hidden="true">⏰</span> TRANSPORTATION TIME
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {serviceData.map((item, index) => (
+                                    <tr
+                                        key={index}
+                                        className={`grid grid-cols-1 md:grid-cols-2 text-gray-700 text-sm md:text-base ${
+                                            index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                                        }`}
+                                    >
+                                        <td className="py-4 px-6 border-b md:border-b-0 md:border-r border-gray-200">
+                                            {item.area}
+                                        </td>
+                                        <td className="py-4 px-6 border-b border-gray-200">
+                                            {item.time}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
 
                     {/* Extra Information */}
@@ -93,7 +93,7 @@ export function Transportation() {
                     </div>
 
                 </div>
-            </section>
+            </main>
         </>
     );
 }

@@ -36,13 +36,7 @@ export default function Page() {
                         { label: "Gallery", href: "#" },
                     ]}
                 />
-    <div className="max-w-7xl mx-auto px-6 py-20">
-      <motion.h1
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-5xl font-extrabold text-center mb-12"
-      >
-      </motion.h1>
+    <main className="max-w-7xl mx-auto px-6 py-20">
 
       {/* GRID GALLERY */}
       <motion.div
@@ -67,11 +61,20 @@ export default function Page() {
             whileHover={{ scale: 1.03 }}
             className="cursor-pointer overflow-hidden rounded-xl shadow-md"
             onClick={() => setSelectedIndex(i)}
+            role="button"
+            tabIndex={0}
+            aria-label={`View Elite Dinner Cruise gallery image ${i + 1}`}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                setSelectedIndex(i);
+              }
+            }}
           >
             <img
               src={src}
-              alt={`Gallery Image ${i + 1}`}
+              alt={`Elite Dinner Cruise - Bosphorus dinner cruise experience image ${i + 1}`}
               className="w-full h-48 object-cover"
+              loading="lazy"
             />
           </motion.div>
         ))}
@@ -100,22 +103,24 @@ export default function Page() {
               <button
                 onClick={() => setSelectedIndex(null)}
                 className="absolute -top-10 right-0 text-white hover:text-rose-300 transition"
+                aria-label="Close image gallery"
               >
-                <X size={34} />
+                <X size={34} aria-hidden="true" />
               </button>
 
               {/* LEFT ARROW */}
               <button
                 onClick={prevImage}
                 className="absolute left-0 top-1/2 -translate-y-1/2 text-white hover:text-rose-300 transition"
+                aria-label="Previous image"
               >
-                <ChevronLeft size={45} />
+                <ChevronLeft size={45} aria-hidden="true" />
               </button>
 
               {/* IMAGE */}
               <img
                 src={images[selectedIndex]}
-                alt="Selected"
+                alt={`Elite Dinner Cruise - Bosphorus dinner cruise experience image ${selectedIndex + 1} of ${images.length}`}
                 className="rounded-xl shadow-2xl w-full max-h-[80vh] object-contain"
               />
 
@@ -123,14 +128,15 @@ export default function Page() {
               <button
                 onClick={nextImage}
                 className="absolute right-0 top-1/2 -translate-y-1/2 text-white hover:text-rose-300 transition"
+                aria-label="Next image"
               >
-                <ChevronRight size={45} />
+                <ChevronRight size={45} aria-hidden="true" />
               </button>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </main>
     </>
   );
 }
